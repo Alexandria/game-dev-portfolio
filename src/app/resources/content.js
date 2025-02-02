@@ -29,22 +29,27 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/Alexandria",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/sandersalexandria/",
+  },
+  {
+    name: "Bluesky",
+    icon: "bluesky",
+    link: "https://bsky.app/profile/ripleyscorner.bsky.social",
   },
   {
     name: "X",
     icon: "x",
-    link: "",
+    link: "https://x.com/lexluka_",
   },
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:lex.never.lexi@gmail.com",
   },
 ];
 
@@ -52,7 +57,7 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Game Developer in Unity and Godot</>,
+  headline: <>Lex Kinser Game Developer</>,
   subline: <>I'm Lex. I make games in Unity and Godot.</>,
 };
 
@@ -76,10 +81,15 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for
-        transforming complex challenges into simple, elegant design solutions.
-        Her work spans digital interfaces, interactive experiences, and the
-        convergence of design and technology.
+        I’m a software developer with over 5 years experience building
+        responsive web and mobile applications. I also have a passion for
+        building video games. This site show cases some of my game dev passion
+        projects! Here, you'll find games built in Unity as well as games built
+        for the web. Looking for an engineer to help round out your game dev
+        team? Feel free to reach out. Although engineering is my core domain
+        this portfolio represents a journey of my creativity and technical
+        skills spanning from art to game development and beyond . Enjoy
+        exploring!
       </>
     ),
   },
@@ -88,44 +98,125 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "CodeAlgo",
+        timeframe: "Dec 2024 - Present",
+        role: "Game Developer - Unity",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20%
-            increase in user engagement and 30% faster load times.
+            Led the design, development, and implementation of an educational
+            game, ensuring alignment with organizational goals
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows,
-            enabling designers to iterate 50% faster.
+            Collaborated with graphic designers, UX designers, and web
+            development teams to produce efficient, high-quality code
+          </>,
+          <>
+            Designed and developed engaging levels, compelling storylines, and
+            interactive features such as badges, coins, and XP rewards to
+            enhance user experience and intellectual growth.
+          </>,
+          <>
+            Ensured timely project delivery by adhering to deadlines and
+            maintaining clear communication with the Chief Executive Officer and
+            development team..
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/project-01/cover-code-algo.png",
+            alt: "Code Algo Game",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Shopify",
+        timeframe: "May 2022 - April 2024",
+        role: "Software Engineer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple
-            platforms, improving design consistency by 40%.
+            Laid the foundations for enabling merchants to add video backgrounds
+            to their shop on the mobile application.
           </>,
           <>
-            Led a cross-functional team to launch a new product line,
-            contributing to a 15% increase in overall company revenue.
+            Championed new and engaging features for Shopify merchants in the
+            Shop Editor.
+          </>,
+          <>
+            Tackled development tasks based on system requirements and
+            documented approaches.
+          </>,
+          <>
+            Documented technical specifications and project testing methods for
+            future reference.
+          </>,
+          <>
+            Provided impactful solutions on bugs and inefficiencies in the
+            codebase.
           </>,
         ],
-        images: [],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          {
+            src: "/images/projects/project-01/cover-shopify.png",
+            alt: "Mobile Shopify Editor",
+            width: 16,
+            height: 9,
+          },
+          // optional: leave the array empty if you don't want to display images
+          {
+            src: "/images/projects/project-01/cover-shopify2.png",
+            alt: "Details Form",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        company: "Crema",
+        timeframe: "May 2019 - May 2022",
+        role: "Software Engineer",
+        achievements: [
+          <>
+            On cross-functional Agile teams, I developed a variety of full-stack
+            mobile applications using React Native, Firebase, Expo, and
+            OneSignal.
+          </>,
+          <>
+            Developed a navigational app to help pedestrians and cyclists
+            navigate a 200-acre campus
+          </>,
+          <>
+            This is a full feature navigation app that would dynamically update
+            directions if the user updated the campus map.
+          </>,
+          <>
+            Scaled a mobile application from under 5000 to over 200,000 unique
+            users and later sold for $200,000.
+          </>,
+          <>
+            Created and owned automated deployment strategies for mobile
+            products in both the Android Google Play and Apple App stores
+          </>,
+        ],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          {
+            src: "/images/projects/project-01/cover-crema1.png",
+            alt: "Vera Mobile App",
+            width: 16,
+            height: 9,
+          },
+          // optional: leave the array empty if you don't want to display images
+          {
+            src: "/images/projects/project-01/cover-crema2.png",
+            alt: "Vera Mobile App",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
     ],
   },
