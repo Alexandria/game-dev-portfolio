@@ -23,7 +23,9 @@ const routes = {
 //     '/work/automate-design-handovers-with-a-figma-to-code-pipeline': true
 // }
 
-const protectedRoutes = {};
+const protectedRoutes = {
+  "/work/match-three-game": true,
+};
 
 const effects = {
   mask: "cursor", // none | cursor | topLeft | topRight | bottomLeft | bottomRight
@@ -59,7 +61,8 @@ const display = {
 };
 
 const mailchimp = {
-  action: "https://url/subscribe/post?parameters",
+  // action: "https://url/subscribe/post?parameters",
+  action: "http://eepurl.com/i9Ros2",
   effects: {
     mask: "topRight", // none | cursor | topLeft | topRight | bottomLeft | bottomRight
     gradient: {

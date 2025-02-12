@@ -126,7 +126,7 @@ export const Header = () => {
                   </Flex>
                 </ToggleButton>
               )}
-              {routes["/work"] && (
+              {/* {routes["/work"] && (
                 <ToggleButton
                   prefixIcon="grid"
                   href={`/${params?.locale}/work`}
@@ -136,7 +136,7 @@ export const Header = () => {
                     {work.label}
                   </Flex>
                 </ToggleButton>
-              )}
+              )} */}
               {/* {routes["/blog"] && (
                 <ToggleButton
                   prefixIcon="book"
