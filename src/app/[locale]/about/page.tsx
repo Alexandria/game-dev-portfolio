@@ -65,15 +65,27 @@ export default function About({
       items: [],
     },
     {
-      title: about.work.title,
-      display: about.work.display,
-      items: about.work.experiences.map((experience) => experience.company),
+      title: about.unity.title,
+      display: about.unity.display,
+      items: about.unity.experiences.map((experience) => experience.company),
     },
-    // {
-    //     title: about.studies.title,
-    //     display: about.studies.display,
-    //     items: about.studies.institutions.map(institution => institution.name)
-    // },
+    {
+      title: about.godot.title,
+      display: about.godot.display,
+      items: about.godot.experiences.map((experience) => experience.company),
+    },
+    {
+      title: about.development.title,
+      display: about.development.display,
+      items: about.development.experiences.map(
+        (experience) => experience.company
+      ),
+    },
+    {
+      title: about.studies.title,
+      display: about.studies.display,
+      items: about.studies.institutions.map((institution) => institution.name),
+    },
     {
       title: about.technical.title,
       display: about.technical.display,
@@ -99,7 +111,7 @@ export default function About({
               .map((item) => item.link),
             worksFor: {
               "@type": "Organization",
-              name: about.work.experiences[0].company || "",
+              name: about.unity.experiences[0].company || "",
             },
           }),
         }}
@@ -234,18 +246,18 @@ export default function About({
             </Flex>
           )}
 
-          {about.work.display && (
+          {about.unity.display && (
             <>
               <Heading
                 as="h2"
-                id={about.work.title}
+                id={about.unity.title}
                 variant="display-strong-s"
                 marginBottom="m"
               >
-                {about.work.title}
+                {about.unity.title}
               </Heading>
               <Flex direction="column" fillWidth gap="l" marginBottom="40">
-                {about.work.experiences.map((experience, index) => (
+                {about.unity.experiences.map((experience, index) => (
                   <Flex
                     key={`${experience.company}-${experience.role}-${index}`}
                     fillWidth
@@ -315,7 +327,169 @@ export default function About({
             </>
           )}
 
-          {/* {about.studies.display && (
+          {about.godot.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.godot.title}
+                variant="display-strong-s"
+                marginBottom="m"
+              >
+                {about.godot.title}
+              </Heading>
+              <Flex direction="column" fillWidth gap="l" marginBottom="40">
+                {about.godot.experiences.map((experience, index) => (
+                  <Flex
+                    key={`${experience.company}-${experience.role}-${index}`}
+                    fillWidth
+                    direction="column"
+                  >
+                    <Flex
+                      fillWidth
+                      justifyContent="space-between"
+                      alignItems="flex-end"
+                      marginBottom="4"
+                    >
+                      <Text id={experience.company} variant="heading-strong-l">
+                        {experience.company}
+                      </Text>
+                      <Text
+                        variant="heading-default-xs"
+                        onBackground="neutral-weak"
+                      >
+                        {experience.timeframe}
+                      </Text>
+                    </Flex>
+                    <Text
+                      variant="body-default-s"
+                      onBackground="brand-weak"
+                      marginBottom="m"
+                    >
+                      {experience.role}
+                    </Text>
+                    <Flex as="ul" direction="column" gap="16">
+                      {experience.achievements.map(
+                        (achievement: string, index: any) => (
+                          <Text
+                            as="li"
+                            variant="body-default-m"
+                            key={`${experience.company}-${index}`}
+                          >
+                            {achievement}
+                          </Text>
+                        )
+                      )}
+                    </Flex>
+                    {experience.images.length > 0 && (
+                      <Flex fillWidth paddingTop="m" paddingLeft="40" wrap>
+                        {experience.images.map((image, index) => (
+                          <Flex
+                            key={index}
+                            border="neutral-medium"
+                            borderStyle="solid-1"
+                            radius="m"
+                            minWidth={image.width}
+                            height={image.height}
+                          >
+                            <SmartImage
+                              enlarge
+                              radius="m"
+                              sizes={image.width.toString()}
+                              alt={image.alt}
+                              src={image.src}
+                            />
+                          </Flex>
+                        ))}
+                      </Flex>
+                    )}
+                  </Flex>
+                ))}
+              </Flex>
+            </>
+          )}
+
+          {about.development.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.development.title}
+                variant="display-strong-s"
+                marginBottom="m"
+              >
+                {about.development.title}
+              </Heading>
+              <Flex direction="column" fillWidth gap="l" marginBottom="40">
+                {about.development.experiences.map((experience, index) => (
+                  <Flex
+                    key={`${experience.company}-${experience.role}-${index}`}
+                    fillWidth
+                    direction="column"
+                  >
+                    <Flex
+                      fillWidth
+                      justifyContent="space-between"
+                      alignItems="flex-end"
+                      marginBottom="4"
+                    >
+                      <Text id={experience.company} variant="heading-strong-l">
+                        {experience.company}
+                      </Text>
+                      <Text
+                        variant="heading-default-xs"
+                        onBackground="neutral-weak"
+                      >
+                        {experience.timeframe}
+                      </Text>
+                    </Flex>
+                    <Text
+                      variant="body-default-s"
+                      onBackground="brand-weak"
+                      marginBottom="m"
+                    >
+                      {experience.role}
+                    </Text>
+                    <Flex as="ul" direction="column" gap="16">
+                      {experience.achievements.map(
+                        (achievement: string, index: any) => (
+                          <Text
+                            as="li"
+                            variant="body-default-m"
+                            key={`${experience.company}-${index}`}
+                          >
+                            {achievement}
+                          </Text>
+                        )
+                      )}
+                    </Flex>
+                    {experience.images.length > 0 && (
+                      <Flex fillWidth paddingTop="m" paddingLeft="40" wrap>
+                        {experience.images.map((image, index) => (
+                          <Flex
+                            key={index}
+                            border="neutral-medium"
+                            borderStyle="solid-1"
+                            radius="m"
+                            minWidth={image.width}
+                            height={image.height}
+                          >
+                            <SmartImage
+                              enlarge
+                              radius="m"
+                              sizes={image.width.toString()}
+                              alt={image.alt}
+                              src={image.src}
+                            />
+                          </Flex>
+                        ))}
+                      </Flex>
+                    )}
+                  </Flex>
+                ))}
+              </Flex>
+            </>
+          )}
+
+          {about.studies.display && (
             <>
               <Heading
                 as="h2"
@@ -346,7 +520,7 @@ export default function About({
                 ))}
               </Flex>
             </>
-          )} */}
+          )}
 
           {about.technical.display && (
             <>

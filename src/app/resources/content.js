@@ -93,9 +93,9 @@ const about = {
       </>
     ),
   },
-  work: {
+  unity: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Unity",
     experiences: [
       {
         company: "CodeAlgo",
@@ -131,6 +131,139 @@ const about = {
           },
         ],
       },
+      {
+        company: "Candy Hag Dash",
+        timeframe: "Dec 2024 - Present",
+        role: "Game Developer - Unity",
+        achievements: [
+          <>
+            Led the design, development, and implementation of an educational
+            game, ensuring alignment with organizational goals
+          </>,
+          <>
+            Collaborated with graphic designers, UX designers, and web
+            development teams to produce efficient, high-quality code
+          </>,
+          <>
+            Designed and developed engaging levels, compelling storylines, and
+            interactive features such as badges, coins, and XP rewards to
+            enhance user experience and intellectual growth.
+          </>,
+          <>
+            Ensured timely project delivery by adhering to deadlines and
+            maintaining clear communication with the Chief Executive Officer and
+            development team..
+          </>,
+        ],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          {
+            src: "/images/projects/candy-hag-dash/cover-04.png",
+            alt: "Code Algo Game",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/candy-hag-dash/cover-02.png",
+            alt: "Code Algo Game",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+    ],
+  },
+  godot: {
+    display: true, // set to false to hide this section
+    title: "Godot",
+    experiences: [
+      {
+        company: "Trick or Treat Tower Defense",
+        timeframe: "Dec 2024 - Present",
+        role: "Game Developer - Godot",
+        achievements: [
+          <>
+            Led the design, development, and implementation of an educational
+            game, ensuring alignment with organizational goals
+          </>,
+          <>
+            Collaborated with graphic designers, UX designers, and web
+            development teams to produce efficient, high-quality code
+          </>,
+          <>
+            Designed and developed engaging levels, compelling storylines, and
+            interactive features such as badges, coins, and XP rewards to
+            enhance user experience and intellectual growth.
+          </>,
+          <>
+            Ensured timely project delivery by adhering to deadlines and
+            maintaining clear communication with the Chief Executive Officer and
+            development team..
+          </>,
+        ],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          {
+            src: "/images/projects/tower-defense/cover-video.mp4",
+            alt: "Code Algo Game",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/technical/godot-editor.png",
+            alt: "Code Algo Game",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        company: "Galaxy Hop Cafe",
+        timeframe: "Dec 2024 - Present",
+        role: "Game Developer - Godot",
+        achievements: [
+          <>
+            Led the design, development, and implementation of an educational
+            game, ensuring alignment with organizational goals
+          </>,
+          <>
+            Collaborated with graphic designers, UX designers, and web
+            development teams to produce efficient, high-quality code
+          </>,
+          <>
+            Designed and developed engaging levels, compelling storylines, and
+            interactive features such as badges, coins, and XP rewards to
+            enhance user experience and intellectual growth.
+          </>,
+          <>
+            Ensured timely project delivery by adhering to deadlines and
+            maintaining clear communication with the Chief Executive Officer and
+            development team..
+          </>,
+        ],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          {
+            src: "/images/projects/galaxy-hop-cafe/cover-video.mp4",
+            alt: "Galaxy Hop Cafe",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/galaxy-hop-cafe/cover-01.png",
+            alt: "Galaxy Hop Cafe",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+    ],
+  },
+
+  development: {
+    display: true,
+    title: "Web and Mobile Development",
+    experiences: [
       {
         company: "Shopify",
         timeframe: "May 2022 - April 2024",
@@ -220,8 +353,9 @@ const about = {
       },
     ],
   },
+
   studies: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Studies",
     institutions: [
       {
@@ -239,20 +373,18 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
+        title: "Unity",
+        description: <>Develops games in Unity and is proficient in C#</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
+            src: "/images/projects/technical/unity-01.png",
             alt: "Project image",
             width: 16,
             height: 9,
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
+            src: "/images/projects/candy-hag-dash/cover-02.png",
             alt: "Project image",
             width: 16,
             height: 9,
@@ -260,18 +392,52 @@ const about = {
         ],
       },
       {
-        title: "Next.js",
+        title: "Godot",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Proficient with the node based development and GDscript </>
         ),
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
+            src: "/images/projects/technical/godot-editor.png",
             alt: "Project image",
             width: 16,
             height: 9,
           },
+        ],
+      },
+      {
+        title: "React",
+        description: (
+          <>Web application development using Typescript and Node js</>
+        ),
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          // {
+          //   src: "/images/projects/technical/react-no-background.png",
+          //   alt: "Project image",
+          //   width: 16,
+          //   height: 9,
+          // },
+          // {
+          //   src: "/images/projects/technical/typescript.webp",
+          //   alt: "Project image",
+          //   width: 16,
+          //   height: 9,
+          // },
+        ],
+      },
+      {
+        title: "React Native",
+        description: <>Mobile Development</>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          // {
+          //   src: "/images/projects/technical/react-native.png",
+          //   alt: "Project image",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
     ],
