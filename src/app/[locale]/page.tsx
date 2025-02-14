@@ -12,6 +12,8 @@ import {
 } from "@/once-ui/components";
 import { Projects } from "@/components/work/Projects";
 
+import styles from "@/components/home.module.scss";
+
 import { baseURL, routes, renderContent } from "@/app/resources";
 import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
@@ -168,7 +170,7 @@ export default function Home({
             fillWidth
             marginBottom="40"
           >
-            <Flex flex={5}>
+            <Flex flex={5} className={styles.stickyHeader}>
               <Heading
                 as="h2"
                 id={about.unity.title}
@@ -264,7 +266,7 @@ export default function Home({
             maxWidth="m"
             marginBottom="40"
           >
-            <Flex flex={5}>
+            <Flex flex={5} className={styles.stickyHeader}>
               <Heading
                 as="h2"
                 id={about.godot.title}

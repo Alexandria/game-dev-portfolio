@@ -133,27 +133,20 @@ const about = {
       },
       {
         company: "Candy Hag Dash",
-        timeframe: "Dec 2024 - Present",
+        timeframe: "April 2022",
         role: "Game Developer - Unity",
         achievements: [
+          <>Led the creative direction & implementation of the game.</>,
           <>
-            Led the design, development, and implementation of an educational
-            game, ensuring alignment with organizational goals
+            Developed all core gaming mechanics including the gaining mechanic,
+            knock back mechanic, and enemy following mechanic.
           </>,
           <>
-            Collaborated with graphic designers, UX designers, and web
-            development teams to produce efficient, high-quality code
+            Collaborated with artists, a music composer, and game writer to
+            manage the project development using project management tools like
+            Trello
           </>,
-          <>
-            Designed and developed engaging levels, compelling storylines, and
-            interactive features such as badges, coins, and XP rewards to
-            enhance user experience and intellectual growth.
-          </>,
-          <>
-            Ensured timely project delivery by adhering to deadlines and
-            maintaining clear communication with the Chief Executive Officer and
-            development team..
-          </>,
+          <>Created a system to source and assess user feed back</>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
