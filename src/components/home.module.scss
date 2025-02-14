@@ -1,0 +1,11 @@
+.stickyHeader {
+  position: sticky;
+  height: fit-content;
+  top: var(--static-space-64);
+}
+
+@media (--s) {
+  .stickyHeader {
+    top: auto;
+  }
+}
