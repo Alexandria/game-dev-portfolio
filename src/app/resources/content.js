@@ -85,7 +85,7 @@ const about = {
         responsive web and mobile applications. Over the past year I've made the
         transition to game development. This site show cases some of my
         professional game development work, game jam games, and also some of my
-        previous work as a software engineer.Looking for an engineer to help
+        previous work as a software engineer. Looking for an engineer to help
         round out your game dev team? Feel free to reach out.
       </>
     ),
