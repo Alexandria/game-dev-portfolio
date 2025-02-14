@@ -82,14 +82,11 @@ const about = {
     description: (
       <>
         I’m a software developer with over 5 years experience building
-        responsive web and mobile applications. I also have a passion for
-        building video games. This site show cases some of my game dev passion
-        projects! Here, you'll find games built in Unity as well as games built
-        for the web. Looking for an engineer to help round out your game dev
-        team? Feel free to reach out. Although engineering is my core domain
-        this portfolio represents a journey of my creativity and technical
-        skills spanning from art to game development and beyond . Enjoy
-        exploring!
+        responsive web and mobile applications. Over the past year I've made the
+        transition to game development. This site show cases some of my
+        professional game development work, game jam games, and also some of my
+        previous work as a software engineer.Looking for an engineer to help
+        round out your game dev team? Feel free to reach out.
       </>
     ),
   },
@@ -100,7 +97,7 @@ const about = {
       {
         company: "CodeAlgo",
         timeframe: "Dec 2024 - Present",
-        role: "Game Developer - Unity",
+        role: "Game Developer - Unity (Team Project)",
         achievements: [
           <>
             Led the design, development, and implementation of an educational
@@ -134,7 +131,7 @@ const about = {
       {
         company: "Candy Hag Dash",
         timeframe: "April 2022",
-        role: "Game Developer - Unity",
+        role: "Game Developer - Unity (Team Project)",
         achievements: [
           <>Led the creative direction & implementation of the game.</>,
           <>
@@ -173,26 +170,15 @@ const about = {
       {
         company: "Trick or Treat Tower Defense",
         timeframe: "Dec 2024 - Present",
-        role: "Game Developer - Godot",
+        role: "Developer & Level Design - Godot (Individual Project)",
         achievements: [
+          <>Designed and developed all core features and game mechanics</>,
+          <>Set up automatic deployment using Netlify</>,
           <>
-            Led the design, development, and implementation of an educational
-            game, ensuring alignment with organizational goals
+            Implemented a path finding system for mob enemies using
+            NavigationAgent2D and Tilemap navigation layers
           </>,
-          <>
-            Collaborated with graphic designers, UX designers, and web
-            development teams to produce efficient, high-quality code
-          </>,
-          <>
-            Designed and developed engaging levels, compelling storylines, and
-            interactive features such as badges, coins, and XP rewards to
-            enhance user experience and intellectual growth.
-          </>,
-          <>
-            Ensured timely project delivery by adhering to deadlines and
-            maintaining clear communication with the Chief Executive Officer and
-            development team..
-          </>,
+          <>Implemented upgradable towers using custom resources</>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
@@ -213,26 +199,21 @@ const about = {
       {
         company: "Galaxy Hop Cafe",
         timeframe: "Dec 2024 - Present",
-        role: "Game Developer - Godot",
+        role: "Developer, Level Design, and Art - Godot (Individual Project)",
         achievements: [
           <>
-            Led the design, development, and implementation of an educational
-            game, ensuring alignment with organizational goals
+            Developed a platform controller that managed the direction and speed
+            of each platform in a specific lane.
           </>,
           <>
-            Collaborated with graphic designers, UX designers, and web
-            development teams to produce efficient, high-quality code
+            Developed infinitely spawning platforms using AnimatableBody2D and
+            Area2D signals to detect player collision
           </>,
           <>
-            Designed and developed engaging levels, compelling storylines, and
-            interactive features such as badges, coins, and XP rewards to
-            enhance user experience and intellectual growth.
+            Developed infinitely spawning platforms and obstacles using Area2D
+            signals and Marker2D as spawn points
           </>,
-          <>
-            Ensured timely project delivery by adhering to deadlines and
-            maintaining clear communication with the Chief Executive Officer and
-            development team..
-          </>,
+          <>Designed and created the majority of the art assets.</>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images

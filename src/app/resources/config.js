@@ -25,6 +25,7 @@ const routes = {
 
 const protectedRoutes = {
   "/work/match-three-game": true,
+  "/blog": true,
 };
 
 const effects = {
