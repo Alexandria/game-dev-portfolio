@@ -81,25 +81,27 @@ const createI18nContent = (t) => {
       title: t("about.work.title"),
       experiences: [
         {
-          company: "FLY",
-          timeframe: t("about.work.experiences.FLY.timeframe"),
-          role: t("about.work.experiences.FLY.role"),
-          achievements: t("about.work.experiences.FLY.achievements").split(";"),
+          company: "CodeAlgo",
+          timeframe: t("about.unity.experiences.CodeAlgo.timeframe"),
+          role: t("about.unity.experiences.CodeAlgo.role"),
+          achievements: t(
+            "about.unity.experiences.CodeAlgo.achievements"
+          ).split(";"),
           images: [
             // optional: leave the array empty if you don't want to display images
             {
-              src: "/images/projects/project-01/cover-01.jpg",
-              alt: "Once UI Project",
+              src: "/images/projects/project-01/cover-code-algo.png",
+              alt: "Code Algo Game",
               width: 16,
               height: 9,
             },
           ],
         },
         {
-          company: "Creativ3",
-          timeframe: t("about.work.experiences.Creativ3.timeframe"),
-          role: t("about.work.experiences.Creativ3.role"),
-          achievements: t("about.work.experiences.Creativ3.achievements").split(
+          company: "Shopify",
+          timeframe: t("about.work.experiences.Shopify.timeframe"),
+          role: t("about.work.experiences.Shopify.role"),
+          achievements: t("about.work.experiences.Shopify.achievements").split(
             ";"
           ),
           images: [],
