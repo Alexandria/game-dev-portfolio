@@ -29,7 +29,7 @@ export async function generateMetadata({
   const { home, about } = renderContent(t);
   const title = home.title;
   const description = home.description;
-  const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
+  const ogImage = `https://github.com/Alexandria/game-dev-portfolio/blob/main/public/images/cover.png?raw=true`;
 
   return {
     title,
@@ -81,7 +81,7 @@ export default function Home({
             name: home.title,
             description: home.description,
             url: `https://${baseURL}`,
-            image: `${baseURL}/og?title=${encodeURIComponent(home.title)}`,
+            image: `https://github.com/Alexandria/game-dev-portfolio/blob/main/public/images/cover.png?raw=true`,
             publisher: {
               "@type": "Person",
               name: person.name,
