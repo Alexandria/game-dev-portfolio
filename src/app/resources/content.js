@@ -58,7 +58,7 @@ const home = {
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>Lex Kinser Game Developer</>,
-  subline: <>I'm Lex. I make games in Unity and Godot.</>,
+  subline: <>Hi, I'm Lex. I make games in Unity and Godot.</>,
 };
 
 const about = {
@@ -83,10 +83,10 @@ const about = {
       <>
         I’m a software developer with over 5 years experience building
         responsive web and mobile applications. Over the past year I've made the
-        transition to game development. This site show cases some of my
-        professional game development work, game jam games, and also some of my
-        previous work as a software engineer. Looking for an engineer to help
-        round out your game dev team? Feel free to reach out.
+        transition to game development. This site showcases my professional game
+        development work, as well as independent games and my previous software
+        engineering work. Looking for an engineer to help round out your game
+        dev team? Feel free to reach out.
       </>
     ),
   },
@@ -100,17 +100,17 @@ const about = {
         role: "Game Developer - Unity (Team Project)",
         achievements: [
           <>
-            Led the design, development, and implementation of an educational
-            game, ensuring alignment with organizational goals
+            Designed and developed engaging interactive features such as player
+            leveling system and XP rewards to enhance user experience and
+            intellectual growth.
+          </>,
+          <>
+            Designed the unit lesson system that enabled students to gain
+            rewards and experience for completing individual lessons
           </>,
           <>
             Collaborated with graphic designers, UX designers, and web
             development teams to produce efficient, high-quality code
-          </>,
-          <>
-            Designed and developed engaging levels, compelling storylines, and
-            interactive features such as badges, coins, and XP rewards to
-            enhance user experience and intellectual growth.
           </>,
           <>
             Ensured timely project delivery by adhering to deadlines and
@@ -201,6 +201,7 @@ const about = {
         timeframe: "Dec 2024 - Present",
         role: "Developer, Level Design, and Art - Godot (Individual Project)",
         achievements: [
+          <>Designed and created the majority of the art assets.</>,
           <>
             Developed a platform controller that managed the direction and speed
             of each platform in a specific lane.
@@ -209,11 +210,6 @@ const about = {
             Developed infinitely spawning platforms using AnimatableBody2D and
             Area2D signals to detect player collision
           </>,
-          <>
-            Developed infinitely spawning platforms and obstacles using Area2D
-            signals and Marker2D as spawn points
-          </>,
-          <>Designed and created the majority of the art assets.</>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
@@ -245,7 +241,7 @@ const about = {
         achievements: [
           <>
             Laid the foundations for enabling merchants to add video backgrounds
-            to their shop on the mobile application.
+            to their merchant store on the mobile application.
           </>,
           <>
             Championed new and engaging features for Shopify merchants in the
@@ -287,7 +283,7 @@ const about = {
         role: "Software Engineer",
         achievements: [
           <>
-            On cross-functional Agile teams, I developed a variety of full-stack
+            On cross-functional Agile teams, developed a variety of full-stack
             mobile applications using React Native, Firebase, Expo, and
             OneSignal.
           </>,
@@ -343,7 +339,7 @@ const about = {
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Technical skills",
     skills: [
       {
