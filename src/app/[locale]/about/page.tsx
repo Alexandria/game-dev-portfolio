@@ -66,12 +66,12 @@ export default function About({
     },
     {
       title: about.unity.title,
-      display: about.unity.display,
+      display: false,
       items: about.unity.experiences.map((experience) => experience.company),
     },
     {
       title: about.godot.title,
-      display: about.godot.display,
+      display: false,
       items: about.godot.experiences.map((experience) => experience.company),
     },
     {
@@ -246,7 +246,7 @@ export default function About({
             </Flex>
           )}
 
-          {about.unity.display && (
+          {/* {about.unity.display && (
             <>
               <Heading
                 as="h2"
@@ -410,7 +410,7 @@ export default function About({
                 ))}
               </Flex>
             </>
-          )}
+          )} */}
 
           {about.development.display && (
             <>

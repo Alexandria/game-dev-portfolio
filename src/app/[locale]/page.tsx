@@ -137,7 +137,7 @@ export default function Home({
                       size="m"
                     />
                   )}
-                  {t("about.title")}
+                  {about.buttonTitle}
                   <Arrow trigger="#about" />
                 </Flex>
               </Button>
