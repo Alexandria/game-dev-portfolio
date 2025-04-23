@@ -53,7 +53,27 @@ export default function Work({
     "[locale]",
     "work",
     "projects",
+    "app-dev",
     locale,
+  ]);
+
+  const gameProjects = getPosts([
+    "src",
+    "app",
+    "[locale]",
+    "work",
+    "projects",
+    "game-dev",
+    "en",
+  ]);
+  const appProjects = getPosts([
+    "src",
+    "app",
+    "[locale]",
+    "work",
+    "projects",
+    "app-dev",
+    "en",
   ]);
 
   const t = useTranslations();
@@ -86,7 +106,7 @@ export default function Work({
           }),
         }}
       />
-      <Projects locale={locale} />
+      <Projects locale={locale} projects={[gameProjects, appProjects]} />
     </Flex>
   );
 }
