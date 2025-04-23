@@ -26,12 +26,12 @@ interface MetaProps {
 }
 interface ProjectsProps {
   range?: [number, number?];
-  locale: string;
+  locale?: string;
   customPath?: string[];
   projects: AllProjectsProps[][];
 }
 
-export function Projects({ range, locale, projects }: ProjectsProps) {
+export function Projects({ range, projects }: ProjectsProps) {
   const { gameMode } = useContext(GameModeContext);
 
   const [gameProjects, appProjects] = projects;
