@@ -98,7 +98,7 @@ export const Header = () => {
         >
           {display.location && <Flex hide="s">{person.location}</Flex>}
         </Flex>
-        <Flex fillWidth justifyContent="center">
+        <Flex gap="8" fillWidth justifyContent="center">
           <Flex
             background="surface"
             border="neutral-medium"
@@ -131,17 +131,6 @@ export const Header = () => {
                   </Flex>
                 </ToggleButton>
               )}
-              {
-                <ToggleButton
-                  prefixIcon="joyStick"
-                  selected={gameMode}
-                  // className={classNames({
-                  //   [styles.toggleButtonOn]: gameMode,
-                  //   [styles.toggleButtonOff]: !gameMode,
-                  // })}
-                  onClick={toggleGameMode}
-                />
-              }
 
               {/* {routes["/work"] && (
                 <ToggleButton
@@ -177,6 +166,25 @@ export const Header = () => {
                 </ToggleButton>
               )} */}
             </Flex>
+          </Flex>
+          <Flex
+            background="transparent"
+            // border="neutral-medium"
+            // borderStyle="solid-1"
+            // radius="m-4"
+            // shadow="l"
+            padding="1"
+            justifyContent="center"
+          >
+            <ToggleButton
+              prefixIcon="joyStick"
+              selected={gameMode}
+              // className={classNames({
+              //   [styles.toggleButtonOn]: gameMode,
+              //   [styles.toggleButtonOff]: !gameMode,
+              // })}
+              onClick={toggleGameMode}
+            />
           </Flex>
         </Flex>
         <Flex fillWidth justifyContent="flex-end" alignItems="center">
