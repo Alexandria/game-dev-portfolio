@@ -19,6 +19,8 @@ import {
 import { routing } from "@/i18n/routing";
 import { renderContent } from "@/app/resources";
 import { Background, Flex } from "@/once-ui/components";
+import { GameModeProvider } from "@/components/GameModeProvider";
+import "./global.css";
 
 export async function generateMetadata({
   params: { locale },
@@ -114,7 +116,8 @@ export default async function RootLayout({
           primary.variable,
           secondary ? secondary.variable : "",
           tertiary ? tertiary.variable : "",
-          code.variable
+          code.variable,
+          "main"
         )}
       >
         <Flex
@@ -132,19 +135,7 @@ export default async function RootLayout({
             lines={effects.lines as any}
           />
           <Flex fillWidth minHeight="16"></Flex>
-          <Header />
-          <Flex
-            zIndex={0}
-            fillWidth
-            paddingY="l"
-            paddingX="l"
-            justifyContent="center"
-            flex={1}
-          >
-            <Flex justifyContent="center" fillWidth minHeight="0">
-              <RouteGuard>{children}</RouteGuard>
-            </Flex>
-          </Flex>
+          <GameModeProvider>{children}</GameModeProvider>
           <Footer />
         </Flex>
       </Flex>

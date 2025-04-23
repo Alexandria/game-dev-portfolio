@@ -44,8 +44,10 @@ const effects = {
   },
 };
 
+// Note to lex! Create a theme provider for more customization of light and dark mode
+// https://medium.com/@ebjonsberg/add-a-dark-light-mode-selector-to-your-next-js-project-b023f9c5649e
 const style = {
-  theme: "dark", // dark | light
+  theme: "light", // dark | light
   neutral: "gray", // sand | gray | slate
   brand: "emerald", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   accent: "indigo", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan

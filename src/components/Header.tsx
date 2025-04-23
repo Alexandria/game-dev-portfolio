@@ -1,9 +1,9 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { useEffect, useState, useTransition } from "react";
+import { useContext, useEffect, useState, useTransition } from "react";
 
-import { Flex, ToggleButton } from "@/once-ui/components";
+import { Flex, ToggleButton, Text } from "@/once-ui/components";
 import styles from "@/components/Header.module.scss";
 
 import { routes, display } from "@/app/resources";
@@ -12,7 +12,11 @@ import { routing } from "@/i18n/routing";
 import { Locale, usePathname, useRouter } from "@/i18n/routing";
 import { renderContent } from "@/app/resources";
 import { useTranslations } from "next-intl";
-import { i18n } from "@/app/resources/config";
+import { i18n, style } from "@/app/resources/config";
+import { Switch } from "./home/Switch";
+import { GameModeContext } from "./GameModeProvider";
+import { FaGamepad } from "react-icons/fa";
+import classNames from "classnames";
 
 type TimeDisplayProps = {
   timeZone: string;
@@ -55,6 +59,7 @@ export const Header = () => {
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname() ?? "";
   const params = useParams();
+  const { gameMode, toggleGameMode } = useContext(GameModeContext);
 
   function handleLanguageChange(locale: string) {
     const nextLocale = locale as Locale;
@@ -126,6 +131,18 @@ export const Header = () => {
                   </Flex>
                 </ToggleButton>
               )}
+              {
+                <ToggleButton
+                  prefixIcon="joyStick"
+                  selected={gameMode}
+                  // className={classNames({
+                  //   [styles.toggleButtonOn]: gameMode,
+                  //   [styles.toggleButtonOff]: !gameMode,
+                  // })}
+                  onClick={toggleGameMode}
+                />
+              }
+
               {/* {routes["/work"] && (
                 <ToggleButton
                   prefixIcon="grid"
@@ -196,9 +213,30 @@ export const Header = () => {
                   ))}
               </Flex>
             )}
-            <Flex hide="s">
+            {/* <Flex
+              alignItems="center"
+              justifyContent="end"
+              className={styles.toggleArea}
+            >
+              <Text
+                style={{ textDecoration: gameMode ? "none" : "underline" }}
+                className={styles.switchLabel}
+              >
+                Dev Work
+              </Text>
+              <Flex justifyContent="center" className={styles.switch}>
+                <Switch />
+              </Flex>
+              <Text
+                style={{ textDecoration: !gameMode ? "none" : "underline" }}
+                className={styles.switchLabel}
+              >
+                Game Dev Work
+              </Text>
+            </Flex> */}
+            {/* <Flex width="16" hide="s">
               {display.time && <TimeDisplay timeZone={person.location} />}
-            </Flex>
+            </Flex> */}
           </Flex>
         </Flex>
       </Flex>

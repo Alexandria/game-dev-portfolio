@@ -20,6 +20,7 @@ import {
   HiCalendarDays,
   HiClipboard,
 } from "react-icons/hi2";
+import { GiJoystick } from "react-icons/gi";
 
 import {
   PiHouseDuotone,
@@ -66,4 +67,5 @@ export const iconLibrary: Record<string, IconType> = {
   x: FaXTwitter,
   bluesky: FaBluesky,
   clipboard: HiClipboard,
+  joyStick: GiJoystick,
 };

@@ -192,7 +192,7 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(
               ...commonStyles,
               opacity: gradient.opacity,
               background:
-                "radial-gradient(100% 100% at 50% 0%, var(--static-transparent) 0%, var(--danger-solid-weak) 100%), radial-gradient(90% 80% at 10% 20%, var(--brand-background-medium) 0%, var(--static-transparent) 100%), radial-gradient(200% 120% at 50% 0%, var(--accent-solid-medium) 0%, var(--static-transparent) 100%)",
+                "radial-gradient(100% 100% at 50% 0%, transparent 0%, #FF5A5F 100%),radial-gradient(90% 80% at 10% 20%, #F0F0F0 0%, transparent 100%),radial-gradient(200% 120% at 50% 0%, #007BFF 0%, transparent 100%)",
               ...maskStyle(),
             }}
           />

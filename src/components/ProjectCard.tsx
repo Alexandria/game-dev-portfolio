@@ -16,7 +16,7 @@ interface ProjectCardProps {
   href: string;
   images: string[];
   title: string;
-  content: string;
+  content?: string;
   description: string;
   avatars: { src: string }[];
 }
@@ -114,47 +114,49 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           ))}
         </Flex>
       )}
-      <Flex
-        mobileDirection="column"
-        fillWidth
-        paddingX="s"
-        paddingTop="12"
-        paddingBottom="24"
-        gap="l"
-      >
-        {title && (
-          <Flex flex={5}>
-            <Heading as="h2" wrap="balance" variant="heading-strong-xl">
-              {title}
-            </Heading>
-          </Flex>
-        )}
-        {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
-          <Flex flex={7} direction="column" gap="16">
-            {avatars?.length > 0 && (
-              <AvatarGroup avatars={avatars} size="m" reverseOrder />
-            )}
-            {description?.trim() && (
-              <Text
-                wrap="balance"
-                variant="body-default-s"
-                onBackground="neutral-weak"
-              >
-                {description}
-              </Text>
-            )}
-            {content?.trim() && (
-              <SmartLink
-                suffixIcon="chevronRight"
-                style={{ margin: "0", width: "fit-content" }}
-                href={href}
-              >
-                <Text variant="body-default-s">{t("projectCard.label")}</Text>
-              </SmartLink>
-            )}
-          </Flex>
-        )}
-      </Flex>
+      {content && (
+        <Flex
+          mobileDirection="column"
+          fillWidth
+          paddingX="s"
+          paddingTop="12"
+          paddingBottom="24"
+          gap="l"
+        >
+          {title && (
+            <Flex flex={5}>
+              <Heading as="h2" wrap="balance" variant="heading-strong-xl">
+                {title}
+              </Heading>
+            </Flex>
+          )}
+          {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
+            <Flex flex={7} direction="column" gap="16">
+              {avatars?.length > 0 && (
+                <AvatarGroup avatars={avatars} size="m" reverseOrder />
+              )}
+              {description?.trim() && (
+                <Text
+                  wrap="balance"
+                  variant="body-default-s"
+                  onBackground="neutral-weak"
+                >
+                  {description}
+                </Text>
+              )}
+              {content?.trim() && (
+                <SmartLink
+                  suffixIcon="chevronRight"
+                  style={{ margin: "0", width: "fit-content" }}
+                  href={href}
+                >
+                  <Text variant="body-default-s">{t("projectCard.label")}</Text>
+                </SmartLink>
+              )}
+            </Flex>
+          )}
+        </Flex>
+      )}
     </Flex>
   );
 };

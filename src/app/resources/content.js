@@ -6,7 +6,7 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Gameplay Developer",
+  role: "React and React Native Developer",
   avatar: "/images/avatar.jpg",
   location: "America/Chicago", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English"], // optional: Leave the array empty if you don't want to display languages
@@ -57,14 +57,14 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Lex Kinser Game Developer</>,
-  subline: <>Hi, I'm Lex. I make games in Unity and Godot.</>,
+  headline: <>Lex Kinser</>,
+  subline: <>Hi, I'm Lex. I build apps in React and React Native.</>,
 };
 
 const about = {
   label: "About",
   title: "About me",
-  buttonTitle: "About me | Other work",
+  buttonTitle: "About me",
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
@@ -82,12 +82,17 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        I’m a software developer with over 5 years experience building
-        responsive web and mobile applications. Over the past year I've made the
-        transition to game development. This site showcases my professional game
-        development work, as well as independent games and my previous software
-        engineering work. Looking for an engineer to help round out your game
-        dev team? Feel free to reach out.
+        Hi, I’m Lex Kinser — a software engineer with 5+ years of experience
+        building scalable, engaging web and mobile applications. I specialize in
+        React, React Native, and TypeScript, and I’ve led the development of
+        everything from immersive educational games to high-impact eCommerce
+        features. My career spans startups and industry giants like Shopify,
+        where I helped launch features for over 20 million users. I’m passionate
+        about clean, maintainable code, collaborative problem solving, and
+        creating intuitive user experiences that align with real business goals.
+        Whether I’m crafting game mechanics, scaling mobile apps to 200K+ users,
+        or launching new tools for online merchants, I bring creativity,
+        reliability, and a user-first mindset to every project.
       </>
     ),
   },

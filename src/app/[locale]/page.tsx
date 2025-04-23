@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import {
   Heading,
@@ -9,6 +9,7 @@ import {
   RevealFx,
   Arrow,
   SmartImage,
+  GlitchFx,
 } from "@/once-ui/components";
 import { Projects } from "@/components/work/Projects";
 
@@ -19,6 +20,10 @@ import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
+import { Switch } from "@/components/home/Switch";
+import HomeContent from "@/components/home/HomeContent";
+import { GameModeContext } from "@/components/GameModeProvider";
+import { getPosts } from "../utils/utils";
 
 export async function generateMetadata({
   params: { locale },
@@ -63,6 +68,26 @@ export default function Home({
   unstable_setRequestLocale(locale);
   const t = useTranslations();
   const { home, about, person, newsletter } = renderContent(t);
+  const handleOnClick = () => {};
+  const gameProjects = getPosts([
+    "src",
+    "app",
+    "[locale]",
+    "work",
+    "projects",
+    "game-dev",
+    "en",
+  ]);
+  const appProjects = getPosts([
+    "src",
+    "app",
+    "[locale]",
+    "work",
+    "projects",
+    "app-dev",
+    "en",
+  ]);
+
   return (
     <Flex
       maxWidth="m"
@@ -153,208 +178,19 @@ export default function Home({
         </Flex>
       </Flex> */}
       <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[1, 1]} locale={locale} />
+        <Projects
+          range={[1, 1]}
+          locale={locale}
+          projects={[gameProjects, appProjects]}
+        />
       </RevealFx>
-      <Flex
-        // className={styles.blockAlign}
-        fillWidth
-        maxWidth="m"
-        direction="column"
-      >
-        {/* TODO: Toggle the last two bullot points on the home page if
-        mobileDirection https://once-ui.com/docs/toggleButton */}
-        {about.unity.display && (
-          <Flex
-            direction="row"
-            mobileDirection="column"
-            fillWidth
-            marginBottom="40"
-          >
-            <Flex flex={5} className={styles.stickyHeader}>
-              <Heading
-                as="h2"
-                id={about.unity.title}
-                variant="display-strong-s"
-                marginBottom="m"
-              >
-                {about.unity.title}
-              </Heading>
-            </Flex>
-            <Flex
-              flex={7}
-              direction="column"
-              fillWidth
-              gap="l"
-              marginBottom="40"
-            >
-              {about.unity.experiences.map((experience, index) => (
-                <Flex
-                  key={`${experience.company}-${experience.role}-${index}`}
-                  fillWidth
-                  direction="column"
-                >
-                  <Flex
-                    fillWidth
-                    justifyContent="space-between"
-                    alignItems="flex-end"
-                    marginBottom="4"
-                  >
-                    <Text id={experience.company} variant="heading-strong-l">
-                      {experience.company}
-                    </Text>
-                    <Text
-                      variant="heading-default-xs"
-                      onBackground="neutral-weak"
-                    >
-                      {experience.timeframe}
-                    </Text>
-                  </Flex>
-                  <Text
-                    variant="body-default-s"
-                    onBackground="brand-weak"
-                    marginBottom="m"
-                  >
-                    {experience.role}
-                  </Text>
-                  <Flex as="ul" direction="column" gap="16">
-                    {experience.achievements.map(
-                      (achievement: string, index: any) => (
-                        <Text
-                          as="li"
-                          variant="body-default-m"
-                          key={`${experience.company}-${index}`}
-                        >
-                          {achievement}
-                        </Text>
-                      )
-                    )}
-                  </Flex>
-                  {experience.images.length > 0 && (
-                    <Flex fillWidth paddingTop="m" paddingLeft="20" wrap>
-                      <Flex gap="m" mobileDirection="column">
-                        {experience.images.map((image, index) => (
-                          <Flex
-                            key={index}
-                            border="neutral-medium"
-                            borderStyle="solid-1"
-                            radius="m"
-                            minWidth={image.width}
-                            height={image.height}
-                          >
-                            <SmartImage
-                              enlarge
-                              radius="m"
-                              sizes={image.width.toString()}
-                              alt={image.alt}
-                              src={image.src}
-                            />
-                          </Flex>
-                        ))}
-                      </Flex>
-                    </Flex>
-                  )}
-                </Flex>
-              ))}
-            </Flex>
-          </Flex>
-        )}
-        {about.godot.display && (
-          <Flex
-            direction="row"
-            mobileDirection="column"
-            fillWidth
-            maxWidth="m"
-            marginBottom="40"
-          >
-            <Flex flex={5} className={styles.stickyHeader}>
-              <Heading
-                as="h2"
-                id={about.godot.title}
-                variant="display-strong-s"
-                marginBottom="m"
-              >
-                {about.godot.title}
-              </Heading>
-            </Flex>
-            <Flex
-              flex={7}
-              direction="column"
-              fillWidth
-              gap="l"
-              marginBottom="40"
-            >
-              {about.godot.experiences.map((experience, index) => (
-                <Flex
-                  key={`${experience.company}-${experience.role}-${index}`}
-                  fillWidth
-                  direction="column"
-                >
-                  <Flex
-                    fillWidth
-                    justifyContent="space-between"
-                    alignItems="flex-end"
-                    marginBottom="4"
-                  >
-                    <Text id={experience.company} variant="heading-strong-l">
-                      {experience.company}
-                    </Text>
-                    <Text
-                      variant="heading-default-xs"
-                      onBackground="neutral-weak"
-                    >
-                      {experience.timeframe}
-                    </Text>
-                  </Flex>
-                  <Text
-                    variant="body-default-s"
-                    onBackground="brand-weak"
-                    marginBottom="m"
-                  >
-                    {experience.role}
-                  </Text>
-                  <Flex as="ul" direction="column" gap="16">
-                    {experience.achievements.map(
-                      (achievement: string, index: any) => (
-                        <Text
-                          as="li"
-                          variant="body-default-m"
-                          key={`${experience.company}-${index}`}
-                        >
-                          {achievement}
-                        </Text>
-                      )
-                    )}
-                  </Flex>
-                  {experience.images.length > 0 && (
-                    <Flex fillWidth paddingTop="m" paddingLeft="20" wrap>
-                      <Flex gap="m" mobileDirection="column">
-                        {experience.images.map((image, index) => (
-                          <Flex
-                            key={index}
-                            border="neutral-medium"
-                            borderStyle="solid-1"
-                            radius="m"
-                            minWidth={image.width}
-                            height={image.height}
-                          >
-                            <SmartImage
-                              enlarge
-                              radius="m"
-                              sizes={image.width.toString()}
-                              alt={image.alt}
-                              src={image.src}
-                            />
-                          </Flex>
-                        ))}
-                      </Flex>
-                    </Flex>
-                  )}
-                </Flex>
-              ))}
-            </Flex>
-          </Flex>
-        )}
-      </Flex>
+      {/* 
+      <RevealFx translateY="16" delay={0.6}>
+        <Projects range={[1, 1]} locale={locale} allProjects={appProjects} />
+      </RevealFx> */}
+
+      <HomeContent />
+
       {/* {routes['/blog'] && (
 				<Flex
 					fillWidth gap="24"

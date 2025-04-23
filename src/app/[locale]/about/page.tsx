@@ -116,7 +116,7 @@ export default function About({
           }),
         }}
       />
-      {about.tableOfContent.display && (
+      {/* {about.tableOfContent.display && (
         <Flex
           style={{ left: "0", top: "50%", transform: "translateY(-50%)" }}
           position="fixed"
@@ -127,7 +127,7 @@ export default function About({
         >
           <TableOfContents structure={structure} about={about} />
         </Flex>
-      )}
+      )} */}
       <Flex fillWidth mobileDirection="column" justifyContent="center">
         {about.avatar.display && (
           <Flex
@@ -412,7 +412,7 @@ export default function About({
             </>
           )} */}
 
-          {about.development.display && (
+          {/* {about.development.display && (
             <>
               <Heading
                 as="h2"
@@ -493,7 +493,7 @@ export default function About({
                 ))}
               </Flex>
             </>
-          )}
+          )} */}
 
           {about.studies.display && (
             <>
