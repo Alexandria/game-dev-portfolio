@@ -6,6 +6,7 @@ import {
   RevealFx,
   SmartImage,
   Text,
+  Button,
 } from "@/once-ui/components";
 import { useTranslations } from "next-intl";
 import styles from "../home.module.scss";
@@ -26,7 +27,7 @@ const HomeContent = () => {
       maxWidth="m"
       direction="column"
     >
-      {gameMode && about.unity.display && (
+      {about.unity.display && (
         <Flex
           direction="row"
           mobileDirection="column"
@@ -110,12 +111,17 @@ const HomeContent = () => {
                     </Flex>
                   </Flex>
                 )}
+                {experience.demo && (
+                  <Flex padding="16">
+                    <Button href={experience.demo}> Play on Itch </Button>
+                  </Flex>
+                )}
               </Flex>
             ))}
           </Flex>
         </Flex>
       )}
-      {gameMode && about.godot.display && (
+      {about.godot.display && (
         <Flex
           direction="row"
           mobileDirection="column"
@@ -206,16 +212,16 @@ const HomeContent = () => {
         </Flex>
       )}
 
-      {!gameMode && about.development.display && (
+      {/*!gameMode && about.development.display && (
         <>
-          {/* <Heading
+           <Heading
             as="h2"
             id={about.development.title}
             variant="display-strong-s"
             marginBottom="m"
           >
             {about.development.title}
-          </Heading> */}
+          </Heading> 
           <Flex direction="column" fillWidth gap="l" marginBottom="40">
             {about.development.experiences.map((experience, index) => (
               <Flex
@@ -291,7 +297,7 @@ const HomeContent = () => {
             ))}
           </Flex>
         </>
-      )}
+      )*/}
     </Flex>
   );
 };

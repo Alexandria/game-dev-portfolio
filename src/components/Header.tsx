@@ -167,7 +167,7 @@ export const Header = () => {
               )} */}
             </Flex>
           </Flex>
-          <Flex
+          {/* <Flex
             background="transparent"
             // border="neutral-medium"
             // borderStyle="solid-1"
@@ -185,7 +185,7 @@ export const Header = () => {
               // })}
               onClick={toggleGameMode}
             />
-          </Flex>
+          </Flex> */}
         </Flex>
         <Flex fillWidth justifyContent="flex-end" alignItems="center">
           <Flex

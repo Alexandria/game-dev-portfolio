@@ -10,7 +10,7 @@ interface GameModeContextType {
 }
 
 export const GameModeContext = createContext<GameModeContextType>({
-  gameMode: false,
+  gameMode: true,
   toggleGameMode: () => {},
 });
 

@@ -58,7 +58,7 @@ const home = {
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>Lex Kinser</>,
-  subline: <>Hi, I'm Lex. I build apps in React and React Native.</>,
+  subline: <>Hi, I'm Lex. I build apps in Unity and Godot.</>,
 };
 
 const about = {
@@ -138,6 +138,7 @@ const about = {
         company: "Candy Hag Dash",
         timeframe: "April 2022",
         role: "Game Developer - Unity (Team Project)",
+        demo: "https://coffeeghoststudios.itch.io/candy-hag-dash",
         achievements: [
           <>Led the creative direction & implementation of the game.</>,
           <>

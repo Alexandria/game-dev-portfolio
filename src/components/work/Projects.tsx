@@ -35,8 +35,7 @@ export function Projects({ range, projects }: ProjectsProps) {
   const { gameMode } = useContext(GameModeContext);
 
   const [gameProjects, appProjects] = projects;
-  const allProjects = gameMode ? gameProjects : appProjects;
-
+  const allProjects = gameProjects;
   const sortedProjects = allProjects.sort((a, b) => {
     return (
       new Date(b.metadata.publishedAt).getTime() -
