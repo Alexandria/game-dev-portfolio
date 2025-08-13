@@ -6,7 +6,7 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "React and React Native Developer",
+  role: "React Engineer Turned Gameplay Developer",
   avatar: "/images/avatar.jpg",
   location: "America/Chicago", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English"], // optional: Leave the array empty if you don't want to display languages
@@ -58,7 +58,7 @@ const home = {
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>Lex Kinser</>,
-  subline: <>Hi, I'm Lex. I build apps in Unity and Godot.</>,
+  subline: <>Hi, I'm Lex. I build games in Unity and Godot.</>,
 };
 
 const about = {
@@ -84,15 +84,20 @@ const about = {
       <>
         Hi, I’m Lex Kinser — a software engineer with 5+ years of experience
         building scalable, engaging web and mobile applications. I specialize in
-        React, React Native, and TypeScript, and I’ve led the development of
-        everything from immersive educational games to high-impact eCommerce
-        features. My career spans startups and industry giants like Shopify,
-        where I helped launch features for over 20 million users. I’m passionate
-        about clean, maintainable code, collaborative problem solving, and
-        creating intuitive user experiences that align with real business goals.
-        Whether I’m crafting game mechanics, scaling mobile apps to 200K+ users,
-        or launching new tools for online merchants, I bring creativity,
-        reliability, and a user-first mindset to every project.
+        React, React Native, and TypeScript. I’ve led the development of
+        everything from cozy plant care apps to high-impact eCommerce features.
+        My career spans both startups and industry giants like Shopify, where I
+        helped launch features for over 20 million users.
+        <p>
+          Over the past year in a half I have been leaning more into my creative
+          side and have started focusing more on game development. I absolutely
+          love being a software engineer and I've found that game development
+          gives me both the fulfillment I seek in tackling challenging problems
+          while also allowing me to better express my creative side. This site
+          showcases my work as a gameplay engineer, highlighting some of my
+          favorite projects I've worked on solo or in a team. Wanna learn more
+          about me? Feel free to say hi!
+        </p>
       </>
     ),
   },
@@ -104,6 +109,8 @@ const about = {
         company: "CodeAlgo",
         timeframe: "Dec 2024 - Present",
         role: "Game Developer - Unity (Team Project)",
+        demo: "https://www.codealgoacademy.com/",
+        demoBtn: "Learn More",
         achievements: [
           <>
             Designed and developed engaging interactive features such as player
@@ -139,6 +146,7 @@ const about = {
         timeframe: "April 2022",
         role: "Game Developer - Unity (Team Project)",
         demo: "https://coffeeghoststudios.itch.io/candy-hag-dash",
+        demoBtn: "Play on Itch",
         achievements: [
           <>Led the creative direction & implementation of the game.</>,
           <>
@@ -156,13 +164,13 @@ const about = {
           // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/candy-hag-dash/cover-04.png",
-            alt: "Code Algo Game",
+            alt: "Candy Hag Dash Game",
             width: 16,
             height: 9,
           },
           {
             src: "/images/projects/candy-hag-dash/cover-02.png",
-            alt: "Code Algo Game",
+            alt: "Candy Hag Dash Game",
             width: 16,
             height: 9,
           },
@@ -178,6 +186,8 @@ const about = {
         company: "Trick or Treat Tower Defense",
         timeframe: "Dec 2024 - Present",
         role: "Developer & Level Design - Godot (Individual Project)",
+        demo: "https://trickortreatgame.netlify.app/",
+        demoBtn: "Play Demo",
         achievements: [
           <>Designed and developed all core features and game mechanics</>,
           <>Set up automatic deployment using Netlify</>,
@@ -207,6 +217,8 @@ const about = {
         company: "Galaxy Hop Cafe",
         timeframe: "Dec 2024 - Present",
         role: "Developer, Level Design, and Art - Godot (Individual Project)",
+        demo: "https://lexiongames.itch.io/galaxy-hop-cafe",
+        demoBtn: "Play on Itch",
         achievements: [
           <>Designed and created the majority of the art assets.</>,
           <>

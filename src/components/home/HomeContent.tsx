@@ -113,7 +113,7 @@ const HomeContent = () => {
                 )}
                 {experience.demo && (
                   <Flex padding="16">
-                    <Button href={experience.demo}> Play on Itch </Button>
+                    <Button href={experience.demo}>{experience.demoBtn}</Button>
                   </Flex>
                 )}
               </Flex>
@@ -204,6 +204,11 @@ const HomeContent = () => {
                         </Flex>
                       ))}
                     </Flex>
+                  </Flex>
+                )}
+                {experience.demo && (
+                  <Flex padding="16">
+                    <Button href={experience.demo}>{experience.demoBtn}</Button>
                   </Flex>
                 )}
               </Flex>
