@@ -220,7 +220,10 @@ const about = {
         demo: "https://lexiongames.itch.io/galaxy-hop-cafe",
         demoBtn: "Play on Itch",
         achievements: [
-          <>Designed and created the majority of the art assets.</>,
+          <>
+            Designed and created the majority of the art assets. (Not a flex.
+            More like a confession 🥲)
+          </>,
           <>
             Developed a platform controller that managed the direction and speed
             of each platform in a specific lane.
