@@ -93,10 +93,9 @@ const about = {
           side and have started focusing more on game development. I absolutely
           love being a software engineer and I've found that game development
           gives me both the fulfillment I seek in tackling challenging problems
-          while also allowing me to better express my creative side. This site
-          showcases my work as a gameplay engineer, highlighting some of my
-          favorite projects I've worked on solo or in a team. Wanna learn more
-          about me? Feel free to say hi!
+          while also allowing me to better express my creative side. Below you
+          will see some of my work as a web and mobile engineer. Have any
+          questions? Want to learn more? feel free to reach out!
         </p>
       </>
     ),
