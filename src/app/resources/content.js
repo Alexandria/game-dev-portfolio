@@ -183,7 +183,7 @@ const about = {
     experiences: [
       {
         company: "Trick or Treat Tower Defense",
-        timeframe: "Dec 2024 - Present",
+        timeframe: "Dec 2024",
         role: "Developer & Level Design - Godot (Individual Project)",
         demo: "https://trickortreatgame.netlify.app/",
         demoBtn: "Play Demo",
@@ -214,7 +214,7 @@ const about = {
       },
       {
         company: "Galaxy Hop Cafe",
-        timeframe: "Dec 2024 - Present",
+        timeframe: "Dec 2024",
         role: "Developer, Level Design, and Art - Godot (Individual Project)",
         demo: "https://lexiongames.itch.io/galaxy-hop-cafe",
         demoBtn: "Play on Itch",
